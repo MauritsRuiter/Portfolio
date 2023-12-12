@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portfolio</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,16 +16,16 @@
 	<header>
 		<div id="page-top" class="header-navbar">
 			<div class="menu">
-				<a class="head-btn" data-target="page-top"><span>Over mij</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
-				<a class="head-btn" data-target="timeline"><span>Tijdlijn</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
-				<a class="head-btn" data-target="projects"><span>Projecten</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
-				<a class="head-btn" data-target="contact"><span>Contact</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="page-top"><span>Over mij</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="timeline"><span>Tijdlijn</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="projects"><span>Projecten</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="contact"><span>Contact</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
 			</div>
 			<div class="mobile-menu">
-				<a class="head-btn" data-target="page-top"><span>Over mij</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
-				<a class="head-btn" data-target="timeline"><span>Tijdlijn</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
-				<a class="head-btn" data-target="projects"><span>Projecten</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
-				<a class="head-btn" data-target="contact"><span>Contact</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="page-top"><span>Over mij</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="timeline"><span>Tijdlijn</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="projects"><span>Projecten</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
+				<a class="head-btn" data-target="contact"><span>Contact</span><ion-icon class="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
 			</div>
 			<button class="burger">
 				<span></span>
@@ -56,9 +56,7 @@
 
 	<!-- Timeline -->
 	<section id="timeline" class="timeline">
-		<div class="timeline-title">
-			<h1>Mijn schoolcarrière</h1>
-		</div>
+	<span class="timeline-title">Mijn Schoolcarrière</span>
 		<ul>
 			<li>
 				<div>
@@ -130,8 +128,8 @@
 	$stmt->execute();
 	$result = $stmt->fetchAll(); ?>
 	
-	<div id="projects" class="projects-title">
-		<h1>Projecten</h1>
+	<div id="projects">
+		<span class="projects-title">Mijn Projecten</span>
 	</div>
 	<div class="projects">
 		<?php foreach ($result as $row) { ?>
@@ -146,7 +144,9 @@
 
 
 	<!-- Contact -->
-	<div id="contact" class="contact">c</div>
+	<div id="contact" class="contact">
+		<a class="contact-link" href="https://linktr.ee/MauritsRuiter" target="_blank">https://linktr.ee/MauritsRuiter</a>
+	</div>
 
 	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

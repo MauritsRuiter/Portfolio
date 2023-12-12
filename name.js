@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             cursor.style.display = "inline"; // Show cursor after typing
 
             setTimeout(function () {
-                aboutMeName.style.backgroundColor = "#0078D7"; // Highlight text with a blue background
+                aboutMeName.style.backgroundColor = "#00349E"; // Highlight text with a blue background
                 cursor.style.display = "none"; // Hide cursor only when background is blue
                 // Simulate backspacing to delete the text with a delay
                 setTimeout(function () {

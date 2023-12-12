@@ -52,7 +52,7 @@ header {
 	font-size: 2em;
 	/* margin: 1em 0 0 1em; */
 	top: 20px;
-	left: 1em;
+	left: 20px;
 	position: absolute;
 }
 
@@ -125,7 +125,7 @@ header {
 	display: block;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1350px) {
 	.burger {
 		display: block;
 		float: right;
@@ -141,6 +141,8 @@ header {
 		position: absolute;
 		left: 0;
 		height: 300px;
+		top: 20px;
+		left: 20px;
 	}
 }
 
@@ -163,7 +165,7 @@ header {
 	backdrop-filter: blur(10px);
 }
 
-#arrow-icon {
+.arrow-icon {
 	position: absolute;
 	font-size: 2em;
 	opacity: 0%;
@@ -171,18 +173,18 @@ header {
 	right: 50px;
 }
 
-a:hover #arrow-icon {
+.head-btn:hover .arrow-icon {
 	opacity: 75%;
 	right: 2px;
 }
 
-a:hover {
+.head-btn:hover {
 	color: var(--full-bright);
 	backdrop-filter: blur(20px);
 	border: 1px solid var(--the-new-white);
 }
 
-a:active {
+.head-btn:active {
 	backdrop-filter: blur(25px);
 	border-radius: 50px;
 }
@@ -303,8 +305,9 @@ a:active {
 	justify-content: center;
 	max-width: 1500px;
 	color: var(--the-new-white);
-	margin: 4em auto 5em auto;
-	font-size: 2em;
+	margin: 0 auto 3em auto;
+	padding: 2em 0 0 0;
+	font-size: 3em;
 }
 
 .timeline ul li {
@@ -522,7 +525,7 @@ time {
 	color: var(--the-new-white);
 	background-color: var(--the-new-black);
 	text-align: center;
-	font-size: 2em;
+	font-size: 3em;
 	padding: 2em 0 2em 0;
 }
 
@@ -537,26 +540,26 @@ time {
 	transition: filter 200ms ease;
 }
 
-.project:hover {
-	filter: blur(2px);
-}
-
-.project:hover .project-text {
-	display: flex;
+.project:hover .project-text{
+	opacity: 1;
+	/* filter: blur(2px); */
+	background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(0,0,0,0.76) 0%, rgba(0,0,0,0.0) 100%);
 }
 
 .project-text {
-	display: none;
+	opacity: 0;
 	color: var(--the-new-white);
 	position: absolute;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	top: 0;
+	bottom: 0;
 	left: 50%;
 	transform: translate(-50%);
 	width: 100%;
 	z-index: 1;
+	transition: all 300ms ease;
 }
 
 .project-heading {
@@ -565,8 +568,13 @@ time {
 
 .project-subheading {}
 
+@media screen and (max-width: 800px) {
+	.projects {
+		grid-template-columns: auto;
+	}
+}
+
 .contact {
-	content: ' ';
 	margin: 0 auto;
 	height: 100vh;
 	z-index: 1;
@@ -574,5 +582,11 @@ time {
 	justify-content: center;
 	flex-direction: column;
 	background-color: var(--the-new-black);
+}
 
+.contact-link {
+	color: var(--the-new-white);
+	text-align: center;
+	font-size: 5em;
+	user-select: none;
 }
