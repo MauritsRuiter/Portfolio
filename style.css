@@ -17,6 +17,9 @@
 
 body {
 	background-color: var(--the-new-black);
+	background-image: url('black-faded-gradient-background-vector-with-blue-border_53876-128309.jpg');
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 #bg-img {
@@ -47,6 +50,10 @@ header {
 	color: var(--the-new-white);
 	letter-spacing: 5px;
 	font-size: 2em;
+	/* margin: 1em 0 0 1em; */
+	top: 20px;
+	left: 1em;
+	position: absolute;
 }
 
 .burger {
@@ -182,7 +189,7 @@ a:active {
 
 .about-me {
 	max-width: 1512px;
-	margin: 30em auto 10em auto;
+	margin: 30em auto 20em auto;
 	z-index: 1;
 	display: flex;
 	justify-content: end;
@@ -211,6 +218,7 @@ a:active {
 }
 
 @keyframes smoothBlink {
+
 	0%,
 	100% {
 		opacity: 0;
@@ -281,8 +289,9 @@ a:active {
 
 .timeline {
 	position: relative;
-	max-width: 1500px;
+	/* max-width: 1500px; */
 	margin: 0 auto;
+	padding-bottom: 5em;
 	/* height: 100vh; */
 	background-color: var(--the-new-black);
 	overflow: hidden;
@@ -294,7 +303,8 @@ a:active {
 	justify-content: center;
 	max-width: 1500px;
 	color: var(--the-new-white);
-	margin: 8em auto 5em auto;
+	margin: 4em auto 5em auto;
+	font-size: 2em;
 }
 
 .timeline ul li {
@@ -496,48 +506,73 @@ time {
 /* timeline end */
 
 
-#projects {
+.projects {
 	display: grid;
 	grid-template-columns: auto auto;
+	height: 100%;
 	gap: 2em;
 	padding: 2em;
-	max-width: 1500px;
-	margin: 10em auto;
+	margin: 0 auto;
+	background-color: var(--the-new-black);
+}
+
+.projects-title {
+	display: block;
+	width: 100%;
+	color: var(--the-new-white);
+	background-color: var(--the-new-black);
+	text-align: center;
+	font-size: 2em;
+	padding: 2em 0 2em 0;
 }
 
 .project {
+	height: 500px;
 	position: relative;
 	text-align: center;
 	background-color: #020202;
-	font-size: 30px;
+	font-size: 25px;
+	overflow: hidden;
 	border-radius: 15px;
-	transition: all 300ms ease;
+	transition: filter 200ms ease;
 }
 
-.project:hover, .project-text {
-	position: relative;
+.project:hover {
+	filter: blur(2px);
+}
+
+.project:hover .project-text {
 	display: flex;
-}
-
-.project-img {
-	border-radius: 15px;
-	z-index: -1;
 }
 
 .project-text {
 	display: none;
 	color: var(--the-new-white);
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+	z-index: 1;
 }
+
+.project-heading {
+	top: 0;
+}
+
+.project-subheading {}
 
 .contact {
 	content: ' ';
-	max-width: 1500px;
 	margin: 0 auto;
 	height: 100vh;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	background-color: rebeccapurple;
+	background-color: var(--the-new-black);
 
 }

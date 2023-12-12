@@ -9,14 +9,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="carousel.scss" />
 </head>
 
 <body>
-	<!-- <img src="Windows-11-Dark-Purple-Abstract-Waves-4K-Wallpaper-2.jpg" id="bg-img" alt="" /> -->
+<span id="logo-name">Maurits Ruiter</span>
 	<header>
 		<div id="page-top" class="header-navbar">
-			<span id="logo-name">Maurits Ruiter</span>
 			<div class="menu">
 				<a class="head-btn" data-target="page-top"><span>Over mij</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
 				<a class="head-btn" data-target="timeline"><span>Tijdlijn</span><ion-icon id="arrow-icon" name="arrow-forward-circle"></ion-icon></a>
@@ -131,14 +129,16 @@
 	$stmt = $conn->prepare("SELECT * FROM `projects`");
 	$stmt->execute();
 	$result = $stmt->fetchAll(); ?>
-
-	<div id="projects">
+	
+	<div id="projects" class="projects-title">
+		<h1>Projecten</h1>
+	</div>
+	<div class="projects">
 		<?php foreach ($result as $row) { ?>
-			<div class="project">
-				<img class="project-img" src=<?php echo $row['img']; ?> alt="">
+			<div class="project" style="background-image: url('<?php echo $row['img']; ?>');  background-repeat: no-repeat; background-size: cover;">
 				<div class="project-text">
-					<h1><?php echo $row['title']; ?></h1>
-					<p>aa</p>
+					<h1 class="project-heading"><?php echo $row['title']; ?></h1>
+					<p class="project-subheading"><?php echo $row['subtextsmall']; ?></p>
 				</div>
 			</div>
 		<?php }; ?>
